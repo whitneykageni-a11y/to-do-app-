@@ -1,0 +1,110 @@
+body {
+    background-color: #f5f7fb;
+    width: 90%;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+#taskInput {
+    width: 70%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #6792e8;
+    margin-bottom: 25px;
+    transition: 0.2s ease;
+}
+
+#taskInput:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+#addTask {
+    padding: 10px 16px;
+    background-color: #5b84d6;
+    border-radius: 10px;
+    transition: 0.2s ease;
+}
+
+#addTask:hover {
+    background-color: #6792e8;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+#message {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #dff6dd;
+    color: #2e7d32;
+    width: fit-content;
+}
+
+#searchInput {
+    border: 1px solid #9db7e5;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: 0.2s ease;
+}
+
+#searchInput:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+#taskList li {
+    margin-bottom: 5px;
+    cursor: pointer;
+    list-style: none;
+    padding: 5px 10px;
+    border: 1px solid #c5d5f1;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#taskList li.completed {
+    text-decoration: line-through;
+    color: black;
+}
+
+#taskList li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#taskList button {
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid #E6EDF9;
+}
+
+@keyframes floatUp {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    20% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+#message.float {
+    animation: floatUp 2s ease forwards;
+}
